@@ -19,7 +19,7 @@ Outcome
 
  Repository Contents
  `/code` → Arduino sketch for obstacle avoidance
- `/circuit_diagram` → (Add wiring diagram here if available)
+ `/circuit_diagram` → (wiring diagram )
  `/docs` → (report)
 
 
