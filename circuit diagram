@@ -1,0 +1,29 @@
+      +-------------------+      
+      |  L298N Driver IC  |      
+      |                   |      
+ M1+--+ IN1           OUT1+---> Gear Motor (Left)
+ M1---+ IN2           OUT2+---> Gear Motor (Right)
+      |                   |
+ ENA--+ ENA           ENB +---> Enable pins to Arduino
+      +-------------------+      
+        |    |       |   |
+        |    |       |   +--> Connected to Arduino (PWM pins)
+        |    |              
+        |    +--> Power (+12V / Battery Pack)      
+        |                      
+       GND ---------------------> Arduino GND & Battery -ve
+
++---------------------+         +-------------------+
+|  Arduino UNO Board  |         |  Ultrasonic Sensor|
+|                     |         |   (HC-SR04)       |
+|   5V  ------------->+---------+ VCC               |
+|   GND ------------->+---------+ GND               |
+|   D12 ------------->+---------+ TRIG              |
+|   D13 <-------------+---------+ ECHO              |
+|   D7, D8 ----------> L298N (Motor Control IN1,IN2)|
+|   D4, D5 ----------> L298N (Motor Control IN3,IN4)|
+|   D9, D3 ----------> L298N (ENA, ENB PWM)         |
++---------------------+         +-------------------+
+
+Battery Pack (+) ---> L298N +12V  
+Battery Pack (-) ---> L298N GND ---> Arduino GND
